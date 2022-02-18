@@ -1,0 +1,102 @@
+uuid: 422ccd68-31dc-447b-8589-7d3ce818e639
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.room.field_categories
+    - field.field.node.room.field_description
+    - field.field.node.room.field_photos
+    - field.field.node.room.field_preview_
+    - field.field.node.room.field_price_
+    - field.field.node.room.field_tags_
+    - field.field.node.room.field_title
+    - node.type.room
+  module:
+    - ds
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+    regions:
+      content:
+        - field_title
+        - field_preview_
+        - field_description
+        - field_price_
+        - field_categories
+        - field_photos
+        - field_tags_
+id: node.room.default
+targetEntityType: node
+bundle: room
+mode: default
+content:
+  field_categories:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_photos:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_preview_:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_price_:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_tags_:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  links: true

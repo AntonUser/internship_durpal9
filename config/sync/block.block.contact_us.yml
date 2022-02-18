@@ -1,0 +1,25 @@
+uuid: f2a09292-4084-4743-aa67-c0f1ac634235
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e08d81ac-28aa-4d49-baa8-a8a11f5577c5'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: contact_us
+theme: bartik
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:e08d81ac-28aa-4d49-baa8-a8a11f5577c5'
+settings:
+  id: 'block_content:e08d81ac-28aa-4d49-baa8-a8a11f5577c5'
+  label: Contact_us
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

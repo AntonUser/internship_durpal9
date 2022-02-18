@@ -1,0 +1,17 @@
+uuid: 59692cb2-a201-49a3-a76d-e2c6f1137ea2
+langcode: ru
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Y9NmnZHQq20ASSyTNA6JnwtWrJJiSajOehGDtmUFdM0
+name: medium
+label: 'Средний (280×360)'
+effects:
+  bddf0d06-42f9-4c75-a700-a33cafa25ea0:
+    uuid: bddf0d06-42f9-4c75-a700-a33cafa25ea0
+    id: image_scale
+    weight: 0
+    data:
+      width: 360
+      height: 280
+      upscale: true

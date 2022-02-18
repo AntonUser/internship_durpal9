@@ -1,0 +1,77 @@
+uuid: fb5553ce-ded0-4d79-8a19-e9254c6e8f8a
+langcode: ru
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.token
+    - field.field.taxonomy_term.categories.field_image
+    - field.field.taxonomy_term.categories.field_min_price
+    - field.field.taxonomy_term.categories.field_short_description
+    - taxonomy.vocabulary.categories
+  module:
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          9e668ad2-2e3d-4bc9-8cfa-695a8667f795:
+            uuid: 9e668ad2-2e3d-4bc9-8cfa-695a8667f795
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:categories:field_short_description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          bcbcc422-711b-4d49-9201-c09ec3e82de1:
+            uuid: bcbcc422-711b-4d49-9201-c09ec3e82de1
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:categories:name'
+              label: Название
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: taxonomy_term.categories.token
+targetEntityType: taxonomy_term
+bundle: categories
+mode: token
+content:
+  field_short_description:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  description: true
+  field_image: true
+  field_min_price: true
+  langcode: true

@@ -1,0 +1,15 @@
+uuid: c1a73f35-d69f-4a61-81c0-eb3ebd81a1ac
+langcode: ru
+status: true
+dependencies: {  }
+name: custom_preview
+label: custom_preview
+effects:
+  696fe491-e94d-44e2-b22e-db9283d0ae79:
+    uuid: 696fe491-e94d-44e2-b22e-db9283d0ae79
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 280
+      height: 360
+      anchor: center-center

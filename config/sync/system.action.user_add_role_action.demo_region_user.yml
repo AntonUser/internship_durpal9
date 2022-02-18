@@ -1,0 +1,14 @@
+uuid: 9101080b-3992-450e-94ed-44e467c39397
+langcode: ru
+status: true
+dependencies:
+  config:
+    - user.role.demo_region_user
+  module:
+    - user
+id: user_add_role_action.demo_region_user
+label: 'Добавьте роль Demo region user выбранным пользователям'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: demo_region_user

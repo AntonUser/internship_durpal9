@@ -1,0 +1,35 @@
+uuid: 4a0cb86d-d350-4f80-8935-907fea0f6b76
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.webform_demo_region.body
+    - field.field.node.webform_demo_region.webform
+    - node.type.webform_demo_region
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: JNAoxmAxmDXh3JivWcRRwAXXEGyMw7KWR4b0TgCSog0
+id: node.webform_demo_region.teaser
+targetEntityType: node
+bundle: webform_demo_region
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  langcode: true
+  webform: true

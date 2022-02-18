@@ -1,0 +1,14 @@
+uuid: def9c6b5-8ece-4fd6-b76c-0a71bf0ef169
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+    - toolbar
+id: demo_region_user
+label: 'Demo region user'
+weight: 5
+is_admin: null
+permissions:
+  - 'access toolbar'
+  - 'view the administration theme'

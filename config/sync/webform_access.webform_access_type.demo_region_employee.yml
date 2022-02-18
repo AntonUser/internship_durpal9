@@ -1,0 +1,6 @@
+uuid: 684f85d0-5149-4c3a-85ed-bd728bd88d8b
+langcode: ru
+status: true
+dependencies: {  }
+id: demo_region_employee
+label: Employee

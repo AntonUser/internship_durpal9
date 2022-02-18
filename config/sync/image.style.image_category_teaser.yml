@@ -1,0 +1,15 @@
+uuid: e1ba317f-58cf-42a1-9c21-d13ad0bdcb65
+langcode: ru
+status: true
+dependencies: {  }
+name: image_category_teaser
+label: image_category_teaser
+effects:
+  77a012b9-fa0c-4f53-a4f7-713a9395f03c:
+    uuid: 77a012b9-fa0c-4f53-a4f7-713a9395f03c
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 380
+      height: 364
+      anchor: center-center

@@ -1,0 +1,10 @@
+uuid: cf360cba-36e9-4417-ab8f-e7c0b7409d7d
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+id: node.token
+label: Токен
+targetEntityType: node
+cache: true

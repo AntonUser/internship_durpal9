@@ -1,0 +1,12 @@
+uuid: de7b5938-3a2c-4bb6-bf26-c0489eb70ad9
+langcode: ru
+status: true
+dependencies: {  }
+id: demo_region_us_neast_manager
+label: 'United States: Northeast: Менеджер'
+description: null
+type: demo_region_manager
+permissions:
+  - administer
+emails:
+  - demo_region_manager@test.com

@@ -1,0 +1,15 @@
+uuid: 06e002ff-71de-411f-97f7-20b5a902f851
+langcode: ru
+status: true
+dependencies: {  }
+name: image_style_colorbox
+label: Image_style_colorbox
+effects:
+  e0651218-07e2-49b6-b2c3-63ce0e00e8bc:
+    uuid: e0651218-07e2-49b6-b2c3-63ce0e00e8bc
+    id: image_scale
+    weight: 2
+    data:
+      width: 360
+      height: null
+      upscale: true

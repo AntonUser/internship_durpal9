@@ -1,0 +1,6 @@
+uuid: 0e9faa9c-3cee-493e-b907-550ce84d60dc
+langcode: ru
+status: true
+dependencies: {  }
+id: room
+label: room

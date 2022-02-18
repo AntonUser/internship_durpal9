@@ -1,0 +1,81 @@
+uuid: 2101d259-86a2-4da2-9ab8-68f94f4c6855
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.room.field_categories
+    - field.field.node.room.field_description
+    - field.field.node.room.field_photos
+    - field.field.node.room.field_preview_
+    - field.field.node.room.field_price_
+    - field.field.node.room.field_tags_
+    - field.field.node.room.field_title
+    - image.style.custom_preview
+    - node.type.room
+  module:
+    - ds
+    - media
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+    regions:
+      content:
+        - field_preview_
+        - field_title
+        - field_categories
+        - field_price_
+id: node.room.teaser
+targetEntityType: node
+bundle: room
+mode: teaser
+content:
+  field_categories:
+    type: entity_reference_label
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_preview_:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: content
+      image_style: custom_preview
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_price_:
+    type: number_decimal
+    label: visually_hidden
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 0
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_title:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_description: true
+  field_photos: true
+  field_tags_: true
+  langcode: true
+  links: true

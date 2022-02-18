@@ -1,0 +1,93 @@
+uuid: 42b87a5e-e920-48ba-baac-cbb35453e14f
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.full
+    - field.field.taxonomy_term.categories.field_image
+    - field.field.taxonomy_term.categories.field_min_price
+    - field.field.taxonomy_term.categories.field_short_description
+    - image.style.image_category_teaser
+    - taxonomy.vocabulary.categories
+  module:
+    - layout_builder
+    - layout_discovery
+    - media
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          4edb1838-141a-4bb9-97a2-4631a3a23650:
+            uuid: 4edb1838-141a-4bb9-97a2-4631a3a23650
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:categories:name'
+              label: Название
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: visually_hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          217ed737-5e8b-41c7-9e01-a83258e9700a:
+            uuid: 217ed737-5e8b-41c7-9e01-a83258e9700a
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:categories:field_short_description'
+              label: 'Short Description'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
+id: taxonomy_term.categories.full
+targetEntityType: taxonomy_term
+bundle: categories
+mode: full
+content:
+  field_image:
+    type: media_thumbnail
+    label: visually_hidden
+    settings:
+      image_link: content
+      image_style: image_category_teaser
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_min_price:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  description: true
+  field_short_description: true
+  langcode: true

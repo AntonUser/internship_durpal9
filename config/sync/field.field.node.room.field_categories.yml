@@ -1,0 +1,29 @@
+uuid: c8331257-e9fd-410c-9675-027b46175c9a
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_categories
+    - node.type.room
+    - taxonomy.vocabulary.categories
+id: node.room.field_categories
+field_name: field_categories
+entity_type: node
+bundle: room
+label: Categories
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      categories: categories
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

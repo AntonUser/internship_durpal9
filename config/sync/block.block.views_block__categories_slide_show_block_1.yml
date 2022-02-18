@@ -1,0 +1,29 @@
+uuid: 036ac159-82a2-4d98-aad6-0e82ead4b564
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.categories_slide_show
+  module:
+    - system
+    - views
+  theme:
+    - bartik
+id: views_block__categories_slide_show_block_1
+theme: bartik
+region: header
+weight: -5
+provider: null
+plugin: 'views_block:categories_slide_show-block_1'
+settings:
+  id: 'views_block:categories_slide_show-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

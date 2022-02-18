@@ -1,0 +1,109 @@
+uuid: 3db77b88-8261-48e6-aa42-5faf41e24e72
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.categories.field_image
+    - field.field.taxonomy_term.categories.field_min_price
+    - field.field.taxonomy_term.categories.field_short_description
+    - image.style.image_category_teaser
+    - taxonomy.vocabulary.categories
+  module:
+    - layout_builder
+    - layout_discovery
+    - media
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          adfe37c2-97ba-4799-a574-39d90c78c8e5:
+            uuid: adfe37c2-97ba-4799-a574-39d90c78c8e5
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:categories:field_image'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: media_thumbnail
+                label: visually_hidden
+                settings:
+                  image_link: content
+                  image_style: image_category_teaser
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          2e7beaa9-30d6-4bf5-993b-57acafc14bbb:
+            uuid: 2e7beaa9-30d6-4bf5-993b-57acafc14bbb
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:categories:field_min_price'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: number_decimal
+                label: above
+                settings:
+                  thousand_separator: ''
+                  decimal_separator: .
+                  scale: 2
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          5c8bae1a-c4c7-46f1-882f-80b569eeac9c:
+            uuid: 5c8bae1a-c4c7-46f1-882f-80b569eeac9c
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:categories:name'
+              label: Название
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+id: taxonomy_term.categories.default
+targetEntityType: taxonomy_term
+bundle: categories
+mode: default
+content:
+  field_image:
+    type: media_thumbnail
+    label: visually_hidden
+    settings:
+      image_link: content
+      image_style: image_category_teaser
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_min_price:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  description: true
+  field_short_description: true
+  langcode: true

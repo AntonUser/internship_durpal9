@@ -1,0 +1,14 @@
+uuid: aae36915-2e11-4df9-8f0a-e71c1d284c23
+langcode: ru
+status: true
+dependencies:
+  config:
+    - user.role.demo_region_admin
+  module:
+    - user
+id: user_remove_role_action.demo_region_admin
+label: 'Удалить роль Demo region admin из выбранных пользователей'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: demo_region_admin

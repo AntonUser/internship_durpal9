@@ -1,0 +1,7 @@
+uuid: 835bb8ee-b627-4a32-9d83-489318445132
+langcode: ru
+status: false
+dependencies: {  }
+formId: node_room_form
+captchaType: default
+label: null
