@@ -23,7 +23,6 @@ elements: |-
     '#type': textfield
     '#title': 'Discount code'
     '#maxlength': 10
-    '#pattern': '^[a-z A-Z 0-9]+$'
   phone_numder:
     '#type': tel
     '#title': 'Phone numder'

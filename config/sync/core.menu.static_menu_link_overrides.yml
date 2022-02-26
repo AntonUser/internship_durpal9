@@ -14,3 +14,21 @@ definitions:
     parent: ''
     expanded: false
     enabled: true
+  system__admin_content:
+    enabled: true
+    menu_name: admin
+    parent: system.admin
+    weight: -10
+    expanded: false
+  system__admin:
+    enabled: true
+    menu_name: admin
+    parent: ''
+    expanded: false
+    weight: 9
+  system__admin_structure:
+    enabled: true
+    menu_name: admin
+    parent: system.admin
+    weight: -8
+    expanded: false
